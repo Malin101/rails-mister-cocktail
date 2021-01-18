@@ -1,0 +1,44 @@
+.card-category {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin: 1em;
+}
+
+.ingredients-card-category {
+  background-color: $silver;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  padding: 1em;
+  font-size: 18px;
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.ingredients-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin: 1em;
+}

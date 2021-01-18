@@ -1,0 +1,27 @@
+h1, h2 {
+  color: $silver;
+}
+
+h3 {
+  color: $dark_gray;
+}
+
+p {
+  color: $silver;
+}
+
+.card-category a {
+  color: $gold !important;
+  opacity: 0.7;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: $dark_gray;
+}
