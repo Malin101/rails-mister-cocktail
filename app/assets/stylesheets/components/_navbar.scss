@@ -1,6 +1,12 @@
 .navbar-lewagon {
   // justify-content: space-between;
-  background: $silver;
+  background: $dark_gray;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: $dark_gray;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,12 +14,12 @@
 }
 
 .navbar-lewagon i {
-  color: $dark_gray;
+  color: $silver;
   font-size: 28px;
 }
 
 .nav-link a {
-  color: $dark_gray;
+  color: $silver;
   &:hover {
     text-decoration: none;
     font-weight: bold;
