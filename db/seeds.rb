@@ -10,6 +10,7 @@ require 'json'
 require 'open-uri'
 
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
@@ -20,10 +21,12 @@ ingredients['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient['strIngredient1'])
 end
 
-Cocktail.destroy_all
+@cocktails = %w(Caipirinha Mojito Margarita Cosmopolitan Martini Manhattan Spritz Mimosa Daiquiri).sort
 
 puts "Creating cocktails..."
-Cocktail.create(name: "Caipirinha")
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Moscow Mule")
+
+@cocktails.each do |cocktail|
+  Cocktail.create(name: cocktail)
+end
+
 puts "Finished!"

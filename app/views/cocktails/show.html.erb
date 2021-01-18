@@ -1,23 +1,28 @@
-<h1><%= @cocktail.name %></h1>
-
-
-<div class="ingredients-cards">
-  <div class="ingredients-card-category">
-    <h3>Ingredients:</h3>
-    <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <li> <%= dose.description %> <%= dose.ingredient.name %>
-        <%= link_to "X", dose_path(dose),
-          method: :delete,
-          data: { confirm: "Are you sure?" },
-          class: 'delete-button'
-         %>
-         </li>
-      <% end %>
-    </ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://upload.wikimedia.org/wikipedia/commons/1/16/15-09-26-RalfR-WLC-0191.jpg);">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
   </div>
+</div>
 
-  <div class="ingredients-card-category">
-    <%= render './doses/form' %>
+<div class="container">
+  <div class="ingredients-cards">
+    <div class="ingredients-card-category">
+      <h3>Ingredients:</h3>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li> <%= dose.description %> <%= dose.ingredient.name %>
+          <%= link_to "X", dose_path(dose),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class: 'delete-button'
+           %>
+           </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="ingredients-card-category">
+      <%= render './doses/form' %>
+    </div>
   </div>
 </div>
