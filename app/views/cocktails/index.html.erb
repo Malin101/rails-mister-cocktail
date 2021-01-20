@@ -1,13 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/images/cocktails.jpg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://upload.wikimedia.org/wikipedia/commons/d/db/Rum%2C_Manhattan%2C_Tequila_Old_Fashioned.jpg);">
   <div class="container">
-    <h1>Cocktails</h1>
+    <h1>Mr. Cocktail</h1>
   </div>
 </div>
 
 <div class="container">
   <div class="cocktail-cards">
     <% @cocktails.each do |cocktail| %>
-        <div class="cocktail-card-category" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/15-09-26-RalfR-WLC-0191.jpg)">
+        <div class="cocktail-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://upload.wikimedia.org/wikipedia/commons/3/38/Mai_Tai_mit_LPS_17y.jpg)">
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
     <% end %>
