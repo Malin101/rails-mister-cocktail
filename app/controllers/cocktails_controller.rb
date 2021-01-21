@@ -18,7 +18,8 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :form
+      raise
+      render :new
     end
   end
 
@@ -29,6 +30,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:title, :body, :photo)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end
